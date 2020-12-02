@@ -15,6 +15,78 @@ public abstract class BaseTest {
     }
 
     @DataProvider
+    public Object[][] getDatabase(){
+        return new Object[][]{
+                {
+                        1
+                },
+                {
+                        2
+                },
+                {
+                        3
+                },
+                {
+                        4
+                },
+                {
+                        5
+                },
+                {
+                        6
+                },
+                {
+                        7
+                },
+                {
+                        8
+                },
+                {
+                        9
+                },
+                {
+                        10
+                },
+        };
+    }
+
+    @DataProvider
+    public Object[][] exceptionDatabase(){
+        return new Object[][]{
+                {
+                        "0"
+                },
+                {
+                        "a"
+                },
+                {
+                        "$"
+                },
+                {
+                        "-1"
+                },
+                {
+                        "-5"
+                },
+                {
+                        "z"
+                },
+                {
+                        "*a2"
+                },
+                {
+                        "15.2"
+                },
+                {
+                        "1.4"
+                },
+                {
+                        "1.4ab"
+                }
+        };
+    }
+
+    @DataProvider
     public Object[][] postDatabase(){
         return new Object[][]{
                 {
