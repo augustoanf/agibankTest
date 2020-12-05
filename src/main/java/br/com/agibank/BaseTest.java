@@ -13,7 +13,6 @@ public abstract class BaseTest {
     public static void preCondicao(){
 
         baseURI = "https://jsonplaceholder.typicode.com";
-        basePath = "/posts";
 
         enableLoggingOfRequestAndResponseIfValidationFails();
     }

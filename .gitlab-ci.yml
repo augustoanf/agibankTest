@@ -1,0 +1,30 @@
+image: harbor.sicredi.net/docker-base-images/maven:3.6.3-jdk-11-slim
+
+stages:
+  - healthcheck
+  - contrato
+  - funcional
+  - excecao
+
+HealthCheck:
+  stage: healthcheck
+  script:
+    - mvn test -Dtest=HealthCheckTest
+
+Contrato:
+  stage: contrato
+  script:
+    - mvn test -Dtest=ContratoTest
+
+Funcional:
+  stage: funcional
+  script:
+    - mvn test -Dtest=GetTest
+    - mvn test -Dtest=PostTest
+    - mvn test -Dtest=PutTest
+    - mvn test -Dtest=DeleteTest
+
+Excecao:
+  stage: excecao
+  script:
+    - mvn test -Dtest=ExcecaoTest
