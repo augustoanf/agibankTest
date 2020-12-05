@@ -5,28 +5,29 @@
     {
       "type": "object",
       "properties": {
-        "userId": {
+        "postId": {
           "type": "integer"
         },
         "id": {
           "type": "integer"
         },
-        "title": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
           "type": "string"
         },
         "body": {
           "type": "string"
         }
       },
-      "additionalProperties": false,
       "required": [
-        "userId",
+        "postId",
         "id",
-        "title",
+        "name",
+        "email",
         "body"
       ]
     }
   ]
 }
-
-

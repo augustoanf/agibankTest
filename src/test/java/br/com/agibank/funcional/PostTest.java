@@ -16,15 +16,15 @@ public class PostTest extends BaseTest {
                 Post.
                     builder().
                     userId(1).
-                    title("Title test 1").
-                    body("Body test 1").
+                    title("Title test text 1").
+                    body("Body test text 1").
                     build();
 
             given().
                 contentType(ContentType.JSON).
                 body(post).
             when().
-                post().
+                post("/posts").
             then().
                 statusCode(HttpStatus.SC_CREATED).
                 body("title", is(post.getTitle()),
@@ -46,7 +46,7 @@ public class PostTest extends BaseTest {
             contentType(ContentType.JSON).
             body(post).
         when().
-            post().
+            post("/posts").
         then().
             statusCode(HttpStatus.SC_CREATED).
             body("title", is(post.getTitle()),

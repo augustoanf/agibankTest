@@ -14,7 +14,7 @@ public class DeleteTest extends BaseTest {
             given().
                 pathParam("id",id).
             when().
-                delete("{id}").
+                delete("/posts/{id}").
             then().
                 statusCode(HttpStatus.SC_OK);
         }

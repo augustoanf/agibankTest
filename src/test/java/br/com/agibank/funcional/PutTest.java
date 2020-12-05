@@ -18,8 +18,8 @@ public class PutTest extends BaseTest {
                 Post.
                     builder().
                     userId(1).
-                    title("Title PUT test 1").
-                    body("Body PUT test 1").
+                    title("Title PUT test text 1").
+                    body("Body PUT test text 1").
                     build();
 
             given().
@@ -27,7 +27,7 @@ public class PutTest extends BaseTest {
                 contentType(ContentType.JSON).
                 body(post).
             when().
-                put("{id}").
+                put("/posts/{id}").
             then().
                 statusCode(HttpStatus.SC_OK).
                 body("title", is(post.getTitle()),
