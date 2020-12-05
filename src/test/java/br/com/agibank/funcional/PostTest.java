@@ -1,5 +1,7 @@
-package br.com.agibank;
+package br.com.agibank.funcional;
 
+import br.com.agibank.BaseTest;
+import br.com.agibank.Post;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;

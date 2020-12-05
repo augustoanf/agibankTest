@@ -1,4 +1,4 @@
-package br.com.agibank;
+package br.com.agibank.contrato;
 
 import br.com.agibank.BaseTest;
 import org.testng.annotations.Test;
@@ -20,7 +20,7 @@ public class GetTestSchemaValidation extends BaseTest {
             when().
                 get("/{id}").
             then().
-                body(matchesJsonSchema(new File("src/test/resources/json_schemas/get_test_schema.json")));
+                body(matchesJsonSchemaInClasspath("src/test/resources/json_schemas/get_test_schema.json"));
         }
 
         @Test
@@ -28,6 +28,6 @@ public class GetTestSchemaValidation extends BaseTest {
             when().
                 get().
             then().
-                body(matchesJsonSchema(new File("src/test/resources/json_schemas/get_list_test_schema.json")));
+                body(matchesJsonSchemaInClasspath("src/test/resources/json_schemas/get_list_test_schema.json"));
         }
 }

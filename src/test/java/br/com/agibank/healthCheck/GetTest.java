@@ -1,5 +1,6 @@
-package br.com.agibank;
+package br.com.agibank.healthCheck;
 
+import br.com.agibank.BaseTest;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;

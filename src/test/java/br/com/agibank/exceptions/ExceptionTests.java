@@ -1,12 +1,11 @@
-package br.com.agibank;
+package br.com.agibank.exceptions;
 
+import br.com.agibank.BaseTest;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
-import static org.hamcrest.CoreMatchers.is;
 
 public class ExceptionTests extends BaseTest {
     @Test(dataProvider = "exceptionDatabase")

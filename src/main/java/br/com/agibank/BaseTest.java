@@ -4,14 +4,18 @@ import com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
+
 import static io.restassured.RestAssured.*;
 
 @Listeners({ExtentITestListenerAdapter.class})
 public abstract class BaseTest {
     @BeforeClass
     public static void preCondicao(){
+
         baseURI = "https://jsonplaceholder.typicode.com";
         basePath = "/posts";
+
+        enableLoggingOfRequestAndResponseIfValidationFails();
     }
 
     @DataProvider

@@ -1,11 +1,10 @@
-package br.com.agibank;
+package br.com.agibank.funcional;
 
-import io.restassured.http.ContentType;
+import br.com.agibank.BaseTest;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 
 public class DeleteTest extends BaseTest {
         @Test
